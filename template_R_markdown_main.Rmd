@@ -1,6 +1,6 @@
 ---
-title: "A Multi-page HTML Document"
-author: "Yihui Xie and Romain Lesur"
+title: "Multi-page HTML Document with analysis of table mtcars"
+author: "Reik S"
 date: "`r Sys.Date()`"
 output:
   pagedown::html_paged:
@@ -17,9 +17,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-This is an example of a multi-page HTML document. See https://pagedown.rbind.io for the full documentation. The rest of this document is random text.
+This is an example of a multi-page HTML document. See https://pagedown.rbind.io for the full documentation. The rest of this document is a toy analysis of table *mtcars*.
 
-# Random text
+# Analysis mtcars
+
+```{r head_mtcars, echo=FALSE, message=TRUE, warning=FALSE}
+knitr::kable(head(mtcars[, 1:5]))
+```
+
+
+# This is some randon text
 
 ```{r, results='asis', echo = FALSE}
 random_markdown = function(len = 100) {
